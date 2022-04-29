@@ -143,6 +143,10 @@ img {
   display: flex;
 }
 
+.header-item {
+  position: relative;
+}
+
 .header-item:not(:last-child) {
   margin-right: 50px;
 }
@@ -340,11 +344,12 @@ img {
 .occupation-title,
 .team-title,
 .company-title {
+  margin-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
-  margin-bottom: 50px;
 
   color: var(--title-color);
 }
@@ -358,24 +363,26 @@ img {
 }
 
 .occupation-thumb {
+  position: relative;
+
   display: flex;
   align-items: center;
-  position: relative;
 }
 
 .occupation-top-text {
+  position: absolute;
+  bottom: 0;
+
   display: inline-block;
+  width: 100%;
+  height: 70px;
+  padding-top: 27px;
+  padding-bottom: 27px;
+
   text-align: center;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  text-align: center;
-  width: 100%;
-  height: 70px;
-  position: absolute;
-  bottom: 0;
-  padding-top: 27px;
-  padding-bottom: 27px;
   text-transform: uppercase;
 
   color: #ffffff;
@@ -397,11 +404,11 @@ img {
 
 .team-list > .team-item {
   text-align: center;
-  border-radius: 0px 0px 4px 4px;
 
+  border-radius: 0px 0px 4px 4px;
+  background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  background-color: #ffffff;
 }
 
 .team-item:not(:last-child) {
@@ -414,20 +421,20 @@ img {
 }
 
 .team-name {
+  margin-bottom: 10px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
-
-  margin-bottom: 10px;
 
   color: var(--title-color);
 }
 
 .team-text {
+  margin-bottom: 16px;
+
   font-size: 16px;
   line-height: 1.19;
-
-  margin-bottom: 16px;
 
   color: #757575;
 }
@@ -443,13 +450,17 @@ img {
 }
 
 .team-soc-link {
-  width: 44px;
-  height: 44px;
-  background-color: #ffffff;
-  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+  background-color: #ffffff;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-soc-icon {
@@ -490,12 +501,15 @@ img {
 
   border: 1px solid #afb1b8;
   border-radius: 4px;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .company-icon {
-  fill: #afb1b8;
   width: 170px;
   height: 92px;
+
+  fill: #afb1b8;
 }
 
 .company-link:hover,
@@ -513,6 +527,7 @@ img {
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
+
   background-color: var(--background-color);
 }
 
@@ -549,6 +564,7 @@ img {
 .footer-tel {
   font-size: 14px;
   line-height: 1.71;
+
   color: rgba(255, 255, 255, 0.6);
 }
 
@@ -557,11 +573,13 @@ img {
 }
 
 .footer-soc-title {
+  margin-bottom: 20px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  margin-bottom: 20px;
   text-transform: uppercase;
+
   color: #ffffff;
 }
 
@@ -570,15 +588,17 @@ img {
 }
 
 .footer-soc-link {
-  width: 44px;
-  height: 44px;
-  background-color: #ffffff;
-  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 44px;
+  height: 44px;
 
-  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-soc-link:hover,
@@ -608,17 +628,21 @@ img {
 }
 
 .hero-portfolio-btn {
+  padding: 6px 22px;
+
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
-
-  padding: 6px 22px;
   line-height: 1.63;
-  border-radius: 4px;
-  border: none;
 
   color: #212121;
   background-color: #f5f4fa;
+  border-radius: 4px;
+  border: none;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-portfolio-btn:hover,
@@ -646,6 +670,10 @@ img {
   margin-right: 30px;
 }
 
+.hero-portfolio-link {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .hero-portfolio-link:hover,
 .hero-portfolio-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -654,6 +682,7 @@ img {
 
 .hero-portfolio-thumb {
   position: relative;
+
   overflow: hidden;
 }
 
@@ -661,14 +690,18 @@ img {
   position: absolute;
   top: 0;
   left: 0;
+
   display: inline-block;
-  padding: 63px 24px;
   width: 100%;
   height: 100%;
-  background-color: rgba(33, 150, 243, 0.9);
+  padding: 63px 24px;
+
   font-size: 18px;
   line-height: 1.56;
+
   color: #ffffff;
+  background-color: rgba(33, 150, 243, 0.9);
+
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -679,18 +712,19 @@ img {
 }
 
 .hero-portfolio-div {
+  padding: 20px 24px;
+
   background-color: #ffffff;
   border: 1px solid #eeeeee;
   border-top: none;
-  padding: 20px 24px;
 }
 
 .hero-portfolio-title {
+  margin-bottom: 4px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
-  margin-bottom: 4px;
-
   letter-spacing: 0.06em;
 
   color: #212121;
@@ -701,4 +735,61 @@ img {
   line-height: 1.88;
 
   color: #757575;
+}
+
+/* -----------------------------------BACKDROP------------------------------------ */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.2);
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden .modal {
+  transform: scale(0.5);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+
+  width: 528px;
+  height: 581px;
+
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 30px;
+  height: 30px;
+  margin-top: 8px;
+  margin-right: 8px;
+
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
